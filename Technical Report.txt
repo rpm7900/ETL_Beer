@@ -1,0 +1,77 @@
+﻿EXTRACT - Raw Data
+________________
+
+
+Title: Breweries & Brew Pubs in the USA
+Source: data.world
+URL: https://data.world/datafiniti/breweries-brew-pubs-in-the-usa
+Format: .csv
+
+
+Title: US City Populations
+Source: data.world
+URL: https://data.world/gmoney/us-city-populations
+Format: .xlsx
+
+
+Title: Breweries
+Source: data.world
+URL: https://data.world/brettcarpenter/craft-beer-data
+Format: .csv
+
+
+Title: Beers
+Source: data.world
+URL: https://data.world/brettcarpenter/craft-beer-data
+Format: .csv
+
+
+Title: Best Beers by State
+Source: data.world
+URL: https://data.world/gmoney/places-for-beer-s-by-state
+Format: .xlsx
+
+
+Title: Zip County State
+Source: data.world
+URL:https://data.world/niccolley/us-zipcode-to-county-state/workspace/file?filename=ZIP-COUNTY-FIPS_2018-03.csv
+Format:.csv
+
+
+
+
+TRANSFORM
+________________
+Translating Data:
+1. Save “Best Beers by State” as a .csv instead of .xlsx
+2. Save “US City Populations” as a .csv instead of .xlsx
+
+
+Cleaning Data: Breweries and Brew Pubs in the USA
+1. Edit current zip code data
+   1. Loop through zip codes to clean all 9-digit zip codes down to 5-digit zip codes
+2. Input missing zipcode data from Google Places API requests
+   1. Create a dataframe that includes every row WITHOUT a value in the column “postalcode”
+   2. Create a dataframe that includes every row WITH a value in the column “postalcode”
+   3. Create a function that:
+      1. Replaces spaces in the raw address
+      2. Request data from api using address as input
+      3. Try/Except pulling the zipcode from the json response
+         1. In the except: return “None” instead of a zipcode
+      4. Return the zipcode
+   4. .apply the function in the dataframe WITHOUT postalcodes
+   5. Concatenate the dataframes WITH and WITHOUT postalcodes
+   6. Export as a new .csv file clean_breweries_and_brew_pubs_in_the_usa.csv
+
+
+
+
+
+
+LOAD
+________________
+
+
+QuickDBD: Create database diagram for visualization of the database
+SQL Database:
+1. Create Tables for each .csv file
