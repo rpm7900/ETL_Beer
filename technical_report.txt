@@ -1,4 +1,4 @@
-﻿EXTRACT - Raw Data
+EXTRACT - Raw Data
 ________________
 
 
@@ -50,6 +50,7 @@ Translating Data:
 Cleaning Data: Breweries and Brew Pubs in the USA
 1. Edit current zip code data
    1. Loop through zip codes to clean all 9-digit zip codes down to 5-digit zip codes
+   2. Export to the .csv file clean_breweries_and_brew_pubs_in_the_usa.csv
 2. Input missing zipcode data from Google Places API requests
    1. Create a dataframe that includes every row WITHOUT a value in the column “postalcode”
    2. Create a dataframe that includes every row WITH a value in the column “postalcode”
@@ -61,7 +62,7 @@ Cleaning Data: Breweries and Brew Pubs in the USA
       4. Return the zipcode
    4. .apply the function in the dataframe WITHOUT postalcodes
    5. Concatenate the dataframes WITH and WITHOUT postalcodes
-   6. Export as a new .csv file clean_breweries_and_brew_pubs_in_the_usa.csv
+   6. Export to the .csv file clean_breweries_and_brew_pubs_in_the_usa.csv
 
 
 
@@ -70,8 +71,6 @@ Cleaning Data: Breweries and Brew Pubs in the USA
 
 LOAD
 ________________
-
-
 QuickDBD: Create database diagram for visualization of the database
 SQL Database:
-1. Create Tables for each .csv file
+1. Create Tables for each .csv
