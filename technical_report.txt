@@ -1,7 +1,5 @@
 EXTRACT - Raw Data
 ________________
-
-
 Title: Breweries & Brew Pubs in the USA
 Source: data.world
 URL: https://data.world/datafiniti/breweries-brew-pubs-in-the-usa
