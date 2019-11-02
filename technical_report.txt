@@ -72,3 +72,7 @@ ________________
 QuickDBD: Create database diagram for visualization of the database
 SQL Database:
 1. Create Tables for each .csv
+   1. Assign "id SERIAL PRIMARY KEY" to tables lacking unique identifiers
+2. Create linking tables for tables that do not have overlapping data, but do have related data
+   1. Ex/ table1 includes zip codes, table2 includes State
+SQL Database was chosen because of the relatinoal nature of the data tables that we chose. Based on our current knowledge base and data used, SQL was the clear choice.
